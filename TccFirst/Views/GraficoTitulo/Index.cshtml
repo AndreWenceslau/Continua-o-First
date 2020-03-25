@@ -1,0 +1,34 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+<div>
+    <h2><b>Gráfico Títulos (a Pagar/ a Receber)</b></h2>
+</div>
+
+<div class="row">
+    <div class="col-6">
+        <div class="form-group">
+            <label for="data-inicial"><b>Data Inicial</b></label>
+            <input type="date" id="data-inicial" class="form-control border-dark" />
+        </div>
+    </div>
+
+    <div class="col-6">
+        <div class="form-group">
+            <label for="data-final"><b>Data Final</b></label>
+            <input type="date" id="data-final" class="form-control border-dark" />
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12">
+        <div id="morris-extra-area"></div>
+    </div>
+</div>
+
+@section js{
+    <script src="~/Content/tema/bower_components/raphael/js/raphael.min.js"></script>
+    <script src="~/Content/tema/bower_components/morris.js/js/morris.js"></script>
+    <script src="~/Scripts/Graficos/grafico-titulo.js"></script>
+}

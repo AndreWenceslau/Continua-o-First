@@ -1,0 +1,107 @@
+﻿<div id="modal-fornecedor" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog  modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Cadastro de Fornecedor</h5>
+                <button type="button" class="close" data-dismiss="modal" arial-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label for="fornecedor-campo-cnpj"><b>CNPJ</b> <span class="text-danger">*</span></label>
+                            <input type="text" id="fornecedor-campo-cnpj" class="form-control border-dark" placeholder="Digite o CNPJ da Empresa" />
+                        </div>
+                    </div>
+                    <div class="col-6">
+
+                        <div class="form-group">
+                            <label for="fornecedor-campo-nomeFantasia"><b>Nome Fantasia</b></label>
+                            <input type="text" id="fornecedor-campo-nomeFantasia" class="form-control border-dark"  />
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label for="fornecedor-campo-razaoSocial"><b>Razão Social</b></label>
+                            <input type="text" id="fornecedor-nome-razaoSocial" class="form-control border-dark"  />
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="fornecedor-campo-dataCadastro"><b>Data de Cadastro</b><span class="text-danger">*</span></label>
+                            <input type="date" id="fornecedor-campo-dataCadastro" class="form-control border-dark" />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="fornecedor-campo-email"><b>E-Mail</b>  </label>
+                    <input type="text" id="fornecedor-campo-email" class="form-control border-dark"  />
+                </div>
+                <div class="row">
+                    <div class="col-4">
+                        <div class="form-group">
+                            <label for="fornecedor-campo-telefone"><b>Telefone</b>  </label>
+                            <input type="text" id="fornecedor-campo-telefone" class="form-control border-dark" />
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="form-group">
+                            <label for="fornecedor-campo-cep"><b>CEP</b></label>
+                            <input type="text" id="fornecedor-campo-cep" class="form-control border-dark" />
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="form-group">
+                            <label for="fornecedor-campo-logradouro"><b>Logradouro</b></label>
+                            <input type="text" id="fornecedor-campo-logradouro" class="form-control border-dark"  />
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label for="fornecedor-campo-cidade"><b>Cidade</b></label>
+                            <input type="text" id="fornecedor-campo-cidade" class="form-control border-dark"  />
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label for="fornecedor-campo-bairro"><b>Bairro</b></label>
+                            <input type="text" id="fornecedor-campo-bairro" class="form-control border-dark"  />
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3">
+                        <div class="form-group">
+                            <label for="fornecedor-campo-numero"><b>Numero</b></label>
+                            <input type="text" id="fornecedor-campo-numero" class="form-control border-dark"  />
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="form-group">
+                            <label for="fornecedor-campo-sigla"><b>Sigla do Estado</b></label>
+                            <input type="text" class="form-control border-dark"  id="fornecedor-campo-sigla">
+                               
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label for="fornecedor-campo-complemento"><b>Complemento</b></label>
+                            <input type="text" id="fornecedor-campo-complemento" class="form-control border-dark" placeholder="Digite um complemento se houver" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn " data-dismiss="modal" id="botao-cancelar"><i class="fa fa-close"></i> Cancelar</button>
+                <button type="button" class="btn" id="fornecedor-batao-salvar"><i class="fa fa-save"></i> Salvar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<link rel="stylesheet" href="~/Content/css/Fornecedor/TelaCadastroFornecedor.css">

@@ -1,0 +1,28 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+<h2><b> Lista de Caixas</b></h2>
+<hr />
+<button data-toggle="modal" data-target="#modal-caixa" class="btn float-right" id="botao-novoCaixa"><i class="fa fa-plus"></i>Novo Caixa</button>
+<br />
+<table id="caixa-tabela" class="table table-hover table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Operação</th>
+            <th>Descrição</th>
+            <th>Documento</th>
+            <th>Valor </th>
+            <th>Forma de Pagamento</th>
+            <th>Data de Lançamento</th>
+            <th>Historico</th>
+            <th>Ações</th>
+
+        </tr>
+    </thead>
+</table>
+@RenderPage("CadastroCaixa.cshtml")
+<link href="~/Content/css/Caixa/TelaIndexCaixa.css" rel="stylesheet" />
+@section js{
+    <script src="~/Scripts/Caixa/caixa-index.js"></script>
+    <script src="~/Scripts/Caixa/caixa-cadastro.js"></script>
+}

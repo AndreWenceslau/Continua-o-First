@@ -1,0 +1,62 @@
+﻿using System;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace Model
+{
+    [Table("titulos_pagar")]
+    public class TituloPagar
+    {
+        public const int FiltroSemDespesa = 0;
+        public const string StatusPendente = "Pendente";
+        public const string StatusPagoParcialmente = "Parcialmente";
+        public const string StatusCancelado = "Cancelado";
+        public const string StatusFinalizado = "Finalizado";
+
+        [Key, Column("id")]
+        public int Id { get; set; }
+
+        [Column("descricao")]
+        public string Descricao { get; set; }
+
+        [Column("forma_pagamento")]
+        public string FormaPagamento { get; set; }
+
+        [Column("caixa")]
+        public bool Caixa { get; set; }
+
+        [Column("valor_total")]
+        public decimal ValorTotal { get; set; }
+
+        [Column("status")]
+        public string Status { get; set; }
+
+        [Column("data_lancamento")]
+        public DateTime DataLancamento { get; set; }
+
+        [Column("data_vencimento")]
+        public DateTime DataVencimento { get; set; }
+
+        [Column("quantidade_parcelas")]
+        public int QuantidadeParcela { get; set; }
+
+        [Column("registro_ativo")]
+        public bool RegistroAtivo { get; set; }
+
+        #region fk__fornecedores
+        [Column("id_fornecedor")]
+        public int IdFornecedor { get; set; }
+
+        [ForeignKey("IdFornecedor")]
+        public Fornecedor Fornecedor { get; set; }
+        #endregion
+
+        #region fk_categoria_despesas
+        [Column("id_categoria_despesa")]
+        public int IdCategoriaDespesa { get; set; }
+
+        [ForeignKey("IdCategoriaDespesa")]
+        public CategoriaDespesa CategoriaDespesa { get; set; }
+        #endregion
+    }
+}

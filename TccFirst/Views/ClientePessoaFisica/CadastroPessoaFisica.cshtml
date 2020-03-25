@@ -1,0 +1,105 @@
+﻿<div id="modal-clientePessoaFisica" class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title"><b>Cadastro de Cliente Pessoa Física</b></h5>
+                <button type="button" class="close" data-dismiss="modal" arial-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <span id="msg-error"></span>
+                <div class="row">
+                    <div class="col-6">
+                        <div id="fonte" class="form-group">
+                            <label for="clientePessoaFisica-campo-nome">Nome<span class="text-danger">*</span></label>
+                            <input type="text" required="required" id="clientePessoaFisica-campo-nome" class="form-control" />
+                        </div>
+                    </div>
+                    <div  class="col-6">
+                        <div id="fonte" class="form-group">
+                            <label for="clientePessoaFisica-campo-cpf">CPF<span class="text-danger">*</span></label>
+                            <input type="text" id="clientePessoaFisica-campo-cpf" class="form-control" />
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <div id="fonte" class="form-group">
+                            <label for="clientePessoaFisica-campo-dataNascimento">Data de Nascimento<span class="text-danger">*</span></label>
+                            <input type="date" id="clientePessoaFisica-campo-dataNascimento" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div id="fonte" class="form-group">
+                            <label for="clientePessoaFisica-campo-limiteCredito">Limite de Crédito<span class="text-danger">*</span></label>
+                            <input type="text" id="clientePessoaFisica-campo-limiteCredito" class="form-control" />
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div id="fonte" class="form-group">
+                            <label for="clientePessoaFisica-campo-email">E-Mail<span class="text-danger">*</span></label>
+                            <input type="text" id="clientePessoaFisica-campo-email" class="form-control" />
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4">
+                        <div id="fonte" class="form-group">
+                            <label for="clientePessoaFisica-campo-telefone">Telefone<span class="text-danger">*</span></label>
+                            <input type="text" id="clientePessoaFisica-campo-telefone" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div id="fonte" class="form-group">
+                            <label for="clientePessoaFisica-campo-cep">CEP<span class="text-danger">*</span></label>
+                            <input type="text" id="clientePessoaFisica-campo-cep" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div id="fonte" class="form-group">
+                            <label for="clientePessoaFisisca-campo-numero">Número<span class="text-danger">*</span></label>
+                            <input type="text" id="clientePessoaFisica-campo-numero" class="form-control" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-4">
+                        <div id="fonte" class="form-group">
+                            <label for="clientePessoaFisica-campo-bairro">Bairro<span class="text-danger">*</span></label>
+                            <input type="text" id="clientePessoaFisica-campo-bairro" class="form-control" />
+                        </div>
+                    </div>
+                    <div id="fonte" class="col-4">
+                        <div class="form-group">
+                            <label for="clientePessoaFisica-campo-cidade">Cidade<span class="text-danger">*</span></label>
+                            <input type="text" id="clientePessoaFisica-campo-cidade" class="form-control" />
+                        </div>
+                    </div>
+                    <div id="fonte" class="col-4">
+                        <div class="form-group">
+                            <label for="clientePessoaFisica-campo-uf">UF<span class="text-danger">*</span></label>
+                            <input  type="text" class="form-control " id="clientePessoaFisica-campo-uf" >
+                                
+                        </div>
+                    </div>
+                </div>
+                <div id="fonte" class="form-group">
+                    <label for="clientePessoaFisica-campo-complemento">Complemento<span class="text-danger">*</span></label>
+                    <input type="text" id="clientePessoaFisica-campo-complemento" class="form-control" />
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-danger" id="botao-cancelar" data-dismiss="modal"><i class="fa fa-close"></i> Cancelar</button>
+
+                <button type="button" class="btn" id="clientePessoaFisica-batao-salvar">
+                    <i class="fa fa-save"></i> Salvar
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<link rel="stylesheet" href="~/Content/css/ClientePesssoaFisica/TelaCadastroPessoaFisica.css">

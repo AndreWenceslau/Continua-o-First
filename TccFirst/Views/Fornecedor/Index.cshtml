@@ -1,0 +1,24 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+<h2>Lista de Fornecedor</h2>
+<hr />
+<button data-toggle="modal" data-target="#modal-fornecedor" class="btn float-right" id="botao-novoFuncionario"><i class="fa fa-plus"></i>Novo Fornecedor</button>
+<br />
+
+<table id="fornecedor-tabela" class="table table-hover table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Código</th>
+            <th>Razão Social</th>
+            <th width="20%">E-mail</th>
+            <th>Telefone</th>
+            <th>Ação</th>
+        </tr>
+    </thead>
+</table>
+@RenderPage("CadastroFornecedor.cshtml")
+<link rel="stylesheet" href="~/Content/css/Fornecedor/TelaIndexFornecedor.css" />
+    @section js{
+    <script src="~/Scripts/Fornecedor/Fornecedor-index.js"></script>
+}

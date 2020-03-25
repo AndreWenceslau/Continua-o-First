@@ -1,0 +1,45 @@
+﻿@{
+    ViewBag.Title = "Editar";
+}
+
+<link rel="stylesheet" href="~/Content/css/Agencia/TelaEditarAgencia.css">
+<div class="container container-fluid">
+    <h2><b>Edição de Agência '@ViewBag.Agencia.Id'</b></h2>
+    <hr />
+    <form method="post" action="/Agencia/editar">
+        <div class="row">
+            <div class="col-12">
+                <div class="float-right">
+                    <a href="/agencia/index" id="botao-voltartabela" class="btn"><i class="fa fa-backward"></i>Voltar a lista de Agências</a>
+                </div>
+            </div>
+        </div>
+        <input type="hidden" name="id" value="@ViewBag.Agencia.Id" />
+
+        <br />
+        <div class="row">
+            <div class="col-12">
+                <div class="form-group">
+                    <label id="fonte-banco" for="campo-banco">Nome do Banco<span class="text-danger">*</span></label>
+                    <input type="text" name="banco" class="form-control" id="campo-banco" value="@ViewBag.Agencia.Banco" />
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <div class="form-group">
+
+                    <label id="fonte-nomeagencia" for="campo-nomeAgencia">Nome da Agência<span class="text-danger">*</span></label>
+                    <input type="text" name="nomeagencia" class="form-control" id="campo-nomeAgencia" value="@ViewBag.Agencia.NomeAgencia" />
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="form-group">
+                    <label id="fonte-numeroagencia" for="campo-numeroAgencia">Numero da Agência<span class="text-danger">*</span></label>
+                    <input type="text" name="numeroagencia" class="form-control" id="campo-numeroAgencia" value="@ViewBag.Agencia.NumeroAgencia" />
+                </div>
+            </div>
+        </div>
+        <button id="botao-salvar" class="btn float-right" type="submit"><i class="fa fa-save"></i>Salvar</button>
+    </form>
+</div>

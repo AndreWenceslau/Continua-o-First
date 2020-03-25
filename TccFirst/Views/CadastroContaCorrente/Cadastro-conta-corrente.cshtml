@@ -1,0 +1,30 @@
+﻿<div id="modal-cadastro-conta-corrente" class="modal fade" tabindex="-1" role="dialog" style="z-index: 1050;">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title"><b>Cadastro de Conta Corrente</b></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group " id="fonte">
+                    <label for="cadastro-conta-corrente-campo-idAgencia">Agência<span class="text-danger">*</span></label>
+                    <b><select class="form-control border-info" id="cadastro-conta-corrente-campo-idAgencia"></select></b>
+                </div>
+                <div class="form-group">
+                    <label id="fonte" for="cadastro-conta-corrente-campo-numero-conta" mas>Número da Conta Corrente<span class="text-danger">*</span></label>
+                    <input type="text" id="cadastro-conta-corrente-campo-numero-conta" class="form-control" />
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn " data-dismiss="modal" id="botao-cancelar"><i class="fa fa-close"></i> Cancelar</button>
+                <button type="button" class="btn " id="cadastro-conta-corrente-botao-salvar"><i class="fa fa-save"></i> Salvar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<link rel="stylesheet" href="~/Content/css/CadastroContaCorrente/TelaCadastroContaCorrente.css">
+@section js {
+    <script src="~/Scripts/CadastroContaCorrente/Cadastro-conta-corrente-Editar.js"></script>
+}

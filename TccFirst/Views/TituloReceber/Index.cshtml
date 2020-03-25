@@ -1,0 +1,41 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<h2><b>Lista de Títulos a Receber</b></h2>
+<hr />
+<div class="row">
+    <div class="col-12">
+        <a href="/tituloreceber/cadastro" class="btn float-right" id="botao-novoTituloReceber">
+            <i class="fa fa-plus"></i>Novo Título a Receber
+        </a>
+    </div>
+</div>
+<br />
+
+<div class="row">
+    <div class="col-12">
+        <table id="tituloReceber-tabela" class="table table-hover table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>Código</th>
+                    <th>Cliente</th>
+                    <th>Categoria Receita</th> 
+                    <th>Valor Total</th>
+                    <th>Quantidade <br />de parcelas</th>
+                    <th>Status</th>
+                    <th>Data de Lançamento</th>
+                    <th>Data de Recebimento</th>
+                    <th>Data de Vencimento</th>
+                    <th>Descrição</th>
+                    <th>Ação</th>
+                </tr>   
+            </thead>
+        </table>
+    </div>
+</div>
+@section js{
+    <script src="~/Scripts/TituloReceber/tabela-receber-index.js"></script>
+}
+    <link href="~/Content/css/TituloReceber/TelaIndexTituloReceber.css" rel="stylesheet" />
+

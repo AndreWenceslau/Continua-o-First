@@ -1,0 +1,39 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+<h2><b>Lista de Agências</b></h2>
+<hr />
+<a id="botao-novaAgencia" class="btn float-right mb-3" href="/Agencia/Cadastro"> <i class="fa fa-plus"></i>Nova Agência </a>
+<br />
+<table id="agencia-tabela" class="table table-light table-hover table-striped table-border-style">
+    <thead>
+        <tr>
+            <th>Código</th>
+            <th>Nome do Banco</th>
+            <th>Nome da Agência</th>
+            <th>Numero da Agência</th>
+            <th>Ação</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Model.Agencia agencia in ViewBag.Agencias)
+        {
+            <tr>
+                <td>@agencia.Id</td>
+                <td>@agencia.Banco</td>
+                <td>@agencia.NomeAgencia</td>
+                <td>@agencia.NumeroAgencia</td>
+                <td>
+                    <a id="botao-editar" class="btn botao-editar float-right mb-3" href="/agencia/editar?id=@agencia.Id"><i class="fa fa-edit"></i>Editar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<link rel="stylesheet" href="~/Content/css/Agencia/TelaIndexAgencia.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<link rel="stylesheet" href="//cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" />
+<script src="//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+@section js{
+    <script src="~/Scripts/Agencia/Agencia.js"></script>
+}

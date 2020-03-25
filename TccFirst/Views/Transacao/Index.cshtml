@@ -1,0 +1,80 @@
+﻿
+<h2><b>Lista de Transações</b></h2>
+<hr />
+<a class="btn btn-success float-right mb-3"
+   href="/Transacao/cadastro" id="botao-novaTransacao"><i class="fa fa-plus"></i>Nova Transação</a>
+<br />
+<div style="overflow-x:auto">
+    <div class="row">
+        <div class="col-12">
+            <table id="transacao-tabela" class="table table-light table-hover table-border-style table-striped">
+                <thead>
+                    <tr>
+                        <th>Código</th>
+                        <th>Conta Corrente</th>
+                        <th>Historico</th>
+                        <th>Categoria Receita</th>
+                        <th>Categoria Despesa</th>
+                        <th>Descricao</th>
+                        <th>Documento</th>
+                        <th>Tipo Pagamento </th>
+                        <th>Valor</th>
+                        <th>Data Lançamento</th>
+                        <th>Data Recebimento</th>
+                        <th>Ação</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (Model.Transacao transacao in ViewBag.Transacoes)
+                    {
+
+                        <tr>
+                            <td>@transacao.Id</td>
+                            <td>@transacao.CadastrosContaCorrente.NumeroConta</td>
+                            <td>@transacao.Historico.Descricao</td>
+                            <td>@transacao.CategoriaReceita.TipoCategoriaReceita</td>
+                            <td>@transacao.DescricaoTransacao</td>
+                            <td>@transacao.Documento</td>
+                            <td>@transacao.TipoPagamento</td>
+                            <td>@transacao.Valor</td>
+                            <td>@transacao.DataLancamento</td>
+                            <td>@transacao.DataRecebimento</td>
+                            <td>
+                                <div style="margin-left: 20px">
+                                    <a id="botao-apagar" class="btn float-right" href="/transacao/apagar?id=@transacao.Id">
+                                        <i class="fa fa-trash"></i>Apagar
+                                    </a>
+                                </div>
+                                <div style="margin-right: 130px">
+                                    <a id="botao-editar" class="btn float-right" href="/transacao/editar?id=@transacao.Id">
+                                        <i class="fa fa-edit"></i>Editar
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<link rel="stylesheet" href="~/Content/css/Transacao/TelaIndexTransacao.css" />
+<link rel="stylesheet" href="//cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $('#transacao-tabela').DataTable({
+            "language": {
+                "lengthMenu": "Mostrando _MENU_ registros por página",
+                "zeroRecords": "Nada encontrado - Desculpe",
+                "info": "Mostrando páginas _PAGE_ de _PAGES_",
+                "infoEmpty": "Nenhum registro disponivel",
+                "infoFiltered": "(filtrado de _MAX_ registros no total)",
+                "search": "Procurar",
+                "previous":"Anterior"
+            }
+        });
+    });
+</script>
