@@ -80,6 +80,7 @@ namespace FirstTestes
             List<Agencia> ObterTodos()
             {
                 return context.Agencias.Where(x => x.RegistroAtivo == true).OrderBy(x => x.Id).ToList();
+
             }
         }
     }

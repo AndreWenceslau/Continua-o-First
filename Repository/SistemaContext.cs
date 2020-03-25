@@ -11,7 +11,7 @@ namespace Repository
         {
             Database.SetInitializer<SistemaContext>(new SistemaInitializer());
         }
-        //public DbSet<Agencia> Agencias { get; set; }
+        public DbSet<Agencia> Agencias { get; set; }
         public DbSet<Caixa> Caixas { get; set; }
         public DbSet<CategoriaDespesa> CategoriasDespesas { get; set; }
         public DbSet<CategoriaReceita> CategoriasReceitas { get; set; }
