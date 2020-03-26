@@ -6,6 +6,7 @@ namespace Model
     [Table("agencias")]
     public class Agencia
     {
+      
         [Key,Column("id")]
         public int Id { get; set; }
 
@@ -20,5 +21,20 @@ namespace Model
 
         [Column("registro_ativo")]
         public bool RegistroAtivo { get; set; }
+
+        //public Agencia(int id, string banco, string nomeAgencia, int numeroAgencia, bool registroAtivo)
+        //{
+        //    Id = id;
+        //    Banco = banco;
+        //    NomeAgencia = nomeAgencia;
+        //    NumeroAgencia = numeroAgencia;
+        //    RegistroAtivo = registroAtivo;
+    
+        //}
+        public Agencia()
+        {
+
+        }
+
     }
 }

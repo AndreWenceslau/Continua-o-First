@@ -7,7 +7,7 @@ namespace Repository.Repositories
 {
    public class AgenciaRepository : IAgenciaRepository
     {
-        private SistemaContext context;
+        public SistemaContext context;
 
         public AgenciaRepository()
         {
