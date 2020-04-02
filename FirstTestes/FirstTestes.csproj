@@ -65,6 +65,8 @@
     <Compile Include="Testes\CaixaTeste.cs" />
     <Compile Include="Testes\CategoriaDespesaTeste.cs" />
     <Compile Include="Testes\CategoriaReceitaTeste.cs" />
+    <Compile Include="Testes\ClientePessoaFisicaTeste.cs" />
+    <Compile Include="Testes\ClientePessoaJuridicaTeste.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
